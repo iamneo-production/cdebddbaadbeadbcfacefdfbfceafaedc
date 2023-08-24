@@ -1,4 +1,4 @@
-package com.examly.springapp;
+package com.examly.springapp.model;
 
 import java.time.LocalDate;
 
@@ -7,7 +7,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.examly.springapp.controller.TaskController;
 import com.fasterxml.jackson.annotation.JsonFormat;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Entity
 @Table(name = "tasks")
@@ -67,6 +72,12 @@ public class Task {
 
     public void setTaskStatus(String taskStatus) {
         this.taskStatus = taskStatus;
+    }
+
+    @PostMapping("/saveTask")
+    public ResponseEntity<Task> saveTask(TaskController taskController) {
+        Task savedTask = taskController.taskRepository.save(this);
+        return ResponseEntity.ok(savedTask);
     }
 
    
