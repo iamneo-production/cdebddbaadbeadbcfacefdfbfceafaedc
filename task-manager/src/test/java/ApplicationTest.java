@@ -1,3 +1,4 @@
+import com.company.tasks.Application;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -12,10 +13,10 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-@SpringBootTest
 @AutoConfigureMockMvc
 @RunWith(SpringRunner.class)
-public class SpringApplicationTests {
+@SpringBootTest()
+public class ApplicationTest {
 
 	@Autowired
     private MockMvc mockMvc;	
@@ -78,6 +79,5 @@ public class SpringApplicationTests {
 		        .andReturn();
 			
 	}
-
 
 }
