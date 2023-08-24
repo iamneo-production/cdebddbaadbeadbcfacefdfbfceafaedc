@@ -1,4 +1,4 @@
-package com.companyname.springbootcrudrest.model
+package com.example.demo;
 import java.util.Date;
 
 import jakarta.persistence.*;
