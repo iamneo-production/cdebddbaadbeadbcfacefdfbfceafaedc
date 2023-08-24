@@ -1,4 +1,4 @@
-package com.company.springapp;
+package com.company.taskmanagerspringboot;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
