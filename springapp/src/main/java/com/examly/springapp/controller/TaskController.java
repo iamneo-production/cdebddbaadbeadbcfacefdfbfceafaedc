@@ -35,7 +35,7 @@ public class TaskController {
 
     @PutMapping("/changeStatus")
     public ResponseEntity<Task> changeStatus(@RequestParam Long id, @RequestParam String status) {
-        Task task = taskRepository.findById(id).orElse(null);
+        final Task task = taskRepository.findById(id).orElse(null);
         if (task == null) {
             return ResponseEntity.notFound().build();
         }
