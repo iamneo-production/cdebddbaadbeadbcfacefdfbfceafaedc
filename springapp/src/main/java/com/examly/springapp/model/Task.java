@@ -19,7 +19,7 @@ public class Task {
     @Column(name = "task_holder_name")
     private String taskHolderName;
     
-    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "yyyy-MM-dd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "MM/dd/yyyy")
     @Column(name = "task_date")
     private LocalDate taskDate;
 
