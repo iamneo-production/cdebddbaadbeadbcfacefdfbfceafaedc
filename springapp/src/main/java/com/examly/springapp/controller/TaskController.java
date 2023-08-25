@@ -1,6 +1,9 @@
-package com.examly.springapp;
+package com.examly.springapp.controller;
 
 import java.util.List;
+
+import com.examly.springapp.model.Task;
+import com.examly.springapp.repository.TaskRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

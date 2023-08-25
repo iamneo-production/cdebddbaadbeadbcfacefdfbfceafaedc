@@ -1,4 +1,4 @@
-package com.examly.springapp;
+package com.examly.springapp.model;
 
 import java.time.LocalDate;
 
